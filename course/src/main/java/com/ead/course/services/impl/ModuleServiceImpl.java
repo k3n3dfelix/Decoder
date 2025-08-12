@@ -48,4 +48,9 @@ public class ModuleServiceImpl implements ModuleService {
         }
         moduleRepository.delete(moduleModel);
     }
+
+    @Override
+    public Optional<ModuleModel> findById(UUID moduleId) {
+        return moduleRepository.findById(moduleId);
+    }
 }
